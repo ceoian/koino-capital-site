@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>You're in — Koino Capital</title>
+<style>
+body{font-family:-apple-system,BlinkMacSystemFont,Inter,sans-serif;background:#0a0a0a;color:#e8e8e8;line-height:1.6;display:flex;align-items:center;justify-content:center;min-height:100vh;margin:0;padding:20px}
+.card{max-width:560px;background:#141414;border:1px solid #222;border-radius:14px;padding:40px;text-align:center}
+h1{font-size:2rem;margin:0 0 16px;background:linear-gradient(135deg,#00d4aa,#7c3aed);-webkit-background-clip:text;-webkit-text-fill-color:transparent}
+p{color:#888;margin:0 0 14px}
+p strong{color:#e8e8e8}
+.cta{display:inline-block;margin-top:20px;padding:14px 28px;background:#00d4aa;color:#000;font-weight:700;border-radius:10px;text-decoration:none}
+.cta:hover{background:#00eebb}
+.session{font-family:monospace;font-size:.78rem;color:#555;margin-top:24px;word-break:break-all}
+</style></head><body>
+<div class="card">
+<h1>You're in.</h1>
+<p>Payment confirmed. We'll email next steps within 1 business hour.</p>
+<p>If you're moving fast, ping <strong><a href="https://t.me/or4cl3bot" style="color:#00d4aa">@or4cl3bot</a></strong> on Telegram now and reference your purchase — we'll start today.</p>
+<a class="cta" href="https://t.me/or4cl3bot">Message us on Telegram</a>
+<p class="session" id="sid"></p>
+</div>
+<script>
+const p = new URLSearchParams(location.search);
+const s = p.get('session');
+if(s) document.getElementById('sid').textContent = 'Reference: ' + s;
+</script>
+</body></html>
